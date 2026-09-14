@@ -1,0 +1,9 @@
+{
+  "appId": "com.aromatic.pos",
+  "appName": "AROMATIC POS",
+  "webDir": ".",
+  "bundledWebRuntime": false,
+  "android": {
+    "backgroundColor": "#0f172a"
+  }
+}

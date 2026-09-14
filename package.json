@@ -1,0 +1,36 @@
+{
+  "name": "aromatic-pos",
+  "version": "2.0.0",
+  "description": "AROMATIC POS - Android, Web and Windows POS",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win",
+    "android:add": "npx cap add android",
+    "android:sync": "npx cap sync android",
+    "android:open": "npx cap open android",
+    "android:run": "npx cap run android"
+  },
+  "devDependencies": {
+    "electron": "^38.1.0",
+    "electron-builder": "^26.0.12"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.0.0",
+    "@capacitor/cli": "^8.0.0",
+    "@capacitor/core": "^8.0.0"
+  },
+  "build": {
+    "appId": "com.aromatic.pos",
+    "productName": "AROMATIC POS",
+    "directories": { "output": "dist" },
+    "files": ["**/*", "!dist/**/*", "!android/**/*"],
+    "win": { "target": "nsis", "icon": "images/icon-512.png" },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  }
+}

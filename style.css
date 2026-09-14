@@ -1,0 +1,1277 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eef1f5;
+    color: #A7A010;
+    overflow-x: hidden;
+}
+
+button,
+input,
+select {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+
+/* =====================================================
+   COMMON
+===================================================== */
+
+.hidden {
+    display: none !important;
+}
+
+.content {
+    padding: 16px;
+    max-width: 1600px;
+    margin: auto;
+}
+
+.page h2 {
+    margin-bottom: 4px;
+}
+
+.page-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 16px;
+}
+
+.page-title p {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.panel {
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.panel h3 
+
+/* =====================================================
+   PAGE NAVIGATION
+===================================================== */
+
+.page {
+    display: none;
+}
+
+.page.active-page {
+    display: block;
+}
+
+
+/* =====================================================
+   LOGIN
+===================================================== */
+
+.login-screen {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #111827, #26364d);
+    padding: 20px;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 380px;
+    background: #fff;
+    border-radius: 18px;
+    padding: 30px 22px;
+    text-align: center;
+    box-shadow: 0 12px 40px rgba(0,0,0,.3);
+}
+
+.logo-box {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 12px;
+    border-radius: 16px;
+    background: #111827;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.login-box h1 {
+    font-size: 27px;
+}
+
+.login-box p {
+    color: #777;
+    margin: 5px 0 22px;
+}
+
+.login-box input {
+    width: 100%;
+    height: 50px;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+}
+
+.login-box input:focus {
+    border-color: #111827;
+}
+
+.login-btn {
+    width: 100%;
+    min-height: 52px;
+    border: none;
+    border-radius: 8px;
+    background: #111827;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.login-box small {
+    display: block;
+    margin-top: 18px;
+    color: #777;
+}
+
+#loginMessage {
+    margin-top: 10px;
+    color: #d00;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.top-header {
+    background: #111827;
+    color: white;
+    min-height: 68px;
+    padding: 10px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+}
+
+.brand-logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: white;
+    color: #111827;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.top-header h1 {
+    font-size: 19px;
+}
+
+.top-header span {
+    font-size: 12px;
+    color: #cbd5e1;
+}
+
+.logout-btn {
+    min-height: 42px;
+    padding: 9px 13px;
+    background: #dc2626;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.main-nav {
+    background: #1f2937;
+    display: flex;
+    gap: 4px;
+    padding: 6px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.main-nav::-webkit-scrollbar {
+    display: none;
+}
+
+.main-nav button {
+    min-width: 78px;
+    min-height: 50px;
+    background: transparent;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 6px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    font-size: 19px;
+    flex-shrink: 0;
+}
+
+.main-nav button span {
+    font-size: 11px;
+    color: #d1d5db;
+}
+
+.main-nav button:hover,
+.main-nav button:active {
+    background: #374151;
+}
+
+
+/* =====================================================
+   DASHBOARD
+===================================================== */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.card {
+    background: white;
+    border-radius: 11px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+.card span {
+    display: block;
+    color: #777;
+    margin-bottom: 7px;
+    font-size: 13px;
+}
+
+.card strong {
+    font-size: 23px;
+}
+
+.terminal-box {
+    background: #111827;
+    color: white;
+    padding: 22px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.terminal-box div {
+    flex: 1;
+    min-width: 180px;
+}
+
+.terminal-box h3 {
+    margin-bottom: 5px;
+}
+
+.terminal-box p {
+    color: #cbd5e1;
+}
+
+.terminal-box button,
+.new-bill-top {
+    min-height: 48px;
+    background: white;
+    color: #111827;
+    border: none;
+    border-radius: 7px;
+    padding: 10px 16px;
+    font-weight: bold;
+}
+
+.new-bill-top {
+    background: #111827;
+    color: white;
+}
+
+
+/* =====================================================
+   BILLING
+===================================================== */
+
+.billing-layout {
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
+    gap: 16px;
+    align-items: start;
+}
+
+.item-panel {
+    position: sticky;
+    top: 10px;
+}
+
+.panel label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.panel input,
+.panel select {
+    width: 100%;
+    min-height: 46px;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    outline: none;
+    font-size: 15px;
+    background: white;
+}
+
+.panel input:focus,
+.panel select:focus {
+    border-color: #111827;
+}
+
+.primary-btn {
+    background: #111827 !important;
+    color: white !important;
+    border: none !important;
+}
+
+.add-item-btn {
+    width: 100%;
+    min-height: 50px;
+    margin-top: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.quick-help {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: #6b7280;
+    font-size: 12px;
+}
+
+.bill-number {
+    background: white;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    white-space: nowrap;
+}
+
+.bill-number span {
+    font-size: 12px;
+    color: #777;
+    margin-right: 4px;
+}
+
+.bill-panel {
+    min-width: 0;
+}
+
+.bill-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.bill-heading h3 {
+    margin: 0;
+}
+
+.bill-heading span {
+    background: #dcfce7;
+    color: #166534;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+th,
+td {
+    padding: 10px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+    font-size: 13px;
+}
+
+th {
+    background: #f3f4f6;
+    font-weight: bold;
+}
+
+.empty {
+    text-align: center;
+    color: #888;
+    padding: 30px;
+}
+
+.delete-small {
+    min-height: 36px;
+    background: #dc2626;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 9px;
+}
+
+
+/* =====================================================
+   BILL SUMMARY
+===================================================== */
+
+.bill-summary {
+    margin-top: 15px;
+    margin-left: auto;
+    max-width: 360px;
+}
+
+.bill-summary > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 7px 0;
+}
+
+.bill-summary input {
+    width: 110px;
+    min-height: 40px;
+    text-align: right;
+}
+
+.grand-total {
+    border-top: 2px solid #111827;
+    margin-top: 7px;
+    padding-top: 13px !important;
+    font-size: 20px;
+}
+
+.grand-total strong {
+    font-size: 25px;
+}
+
+
+/* =====================================================
+   PAYMENT
+===================================================== */
+
+.payment-box {
+    margin-top: 18px;
+    padding-top: 15px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.payment-box h3 {
+    margin-bottom: 10px;
+}
+
+.payment-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.payment-buttons button {
+    min-height: 62px;
+    margin: 0;
+    border: 2px solid #d1d5db;
+    background: white;
+    border-radius: 9px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+
+.payment-buttons button span {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.payment-buttons button.selected {
+    background: #111827;
+    color: white;
+    border-color: #111827;
+    outline: none;
+    transform: none;
+}
+
+
+/* =====================================================
+   UPI
+===================================================== */
+
+.upi-payment-box {
+    margin-top: 15px;
+    padding: 18px;
+    text-align: center;
+    border-radius: 13px;
+    border: 2px solid #d1d5db;
+    background: #f9fafb;
+}
+
+.upi-payment-box h3 {
+    margin-bottom: 5px;
+}
+
+.upi-payment-box p {
+    margin: 7px 0;
+}
+
+#upiAmount {
+    display: block;
+    font-size: 30px;
+    margin: 5px 0 12px;
+}
+
+.upi-qr-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 12px 0;
+}
+
+#upiQr {
+    width: 250px;
+    height: 250px;
+    max-width: 100%;
+    border: 7px solid white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.15);
+}
+
+#upiIdDisplay {
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.upi-status {
+    padding: 10px;
+    margin: 10px auto;
+    max-width: 300px;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.upi-status.pending {
+    background: #fff7ed;
+    color: #9a3412;
+}
+
+.upi-status.success {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.confirm-upi-btn {
+    width: 100%;
+    max-width: 300px;
+    min-height: 48px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   BILL ACTIONS
+===================================================== */
+
+.bill-actions {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 8px;
+}
+
+.bill-actions button {
+    min-height: 50px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.save-btn {
+    background: #15803d !important;
+    color: white !important;
+}
+
+.save-bill-btn {
+    font-size: 15px;
+}
+
+.print-btn {
+    background: #e5e7eb !important;
+    color: #111827 !important;
+}
+
+.danger-btn {
+    background: #dc2626 !important;
+    color: white !important;
+}
+
+
+/* =====================================================
+   ITEMS
+===================================================== */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+#itemMessage,
+#settingMessage {
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   REPORT
+===================================================== */
+
+.report-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 12px;
+    align-items: end;
+}
+
+.report-form label {
+    margin: 0;
+}
+
+.report-form button {
+    min-height: 46px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+#reportResult {
+    margin-top: 20px;
+}
+
+
+/* =====================================================
+   COMMUNICATION
+===================================================== */
+
+.communication-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.communication-grid button {
+    min-height: 58px;
+    background: white;
+    border: none;
+    padding: 12px;
+    border-radius: 9px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+    text-align: left;
+    font-size: 20px;
+}
+
+.communication-grid button span {
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.message-box {
+    margin-top: 15px;
+    padding: 14px;
+    background: #e5e7eb;
+    border-radius: 7px;
+}
+
+
+/* =====================================================
+   SETTINGS
+===================================================== */
+
+.settings-panel {
+    max-width: 700px;
+}
+
+.setting-row {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.setting-row span {
+    font-weight: bold;
+}
+
+.setting-buttons {
+    margin-top: 18px;
+    display: flex;
+    gap: 8px;
+}
+
+.setting-buttons button {
+    min-height: 46px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   TABLET / 8-INCH
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .content {
+        padding: 12px;
+    }
+
+    .billing-layout {
+        grid-template-columns: 240px minmax(0, 1fr);
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =====================================================
+   5-INCH / SMALL POS
+===================================================== */
+
+@media (max-width: 600px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .content {
+        padding: 8px;
+    }
+
+    .top-header {
+        min-height: 60px;
+        padding: 8px;
+    }
+
+    .brand-logo {
+        width: 38px;
+        height: 38px;
+        font-size: 20px;
+    }
+
+    .top-header h1 {
+        font-size: 15px;
+    }
+
+    .top-header span {
+        font-size: 10px;
+    }
+
+    .logout-btn {
+        min-height: 38px;
+        padding: 7px 9px;
+        font-size: 12px;
+    }
+
+    .main-nav {
+        padding: 4px;
+    }
+
+    .main-nav button {
+        min-width: 68px;
+        min-height: 48px;
+        font-size: 17px;
+    }
+
+    .main-nav button span {
+        font-size: 10px;
+    }
+
+    .page-title {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .page-title h2 {
+        font-size: 20px;
+    }
+
+    .new-bill-top {
+        width: 100%;
+    }
+
+    .cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 7px;
+    }
+
+    .card {
+        padding: 12px;
+    }
+
+    .card span {
+        font-size: 11px;
+    }
+
+    .card strong {
+        font-size: 18px;
+    }
+
+    .terminal-box {
+        padding: 15px;
+    }
+
+    .terminal-box button {
+        width: 100%;
+    }
+
+    .billing-layout {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .item-panel {
+        position: static;
+    }
+
+    .panel {
+        padding: 12px;
+        border-radius: 10px;
+    }
+
+    .bill-number {
+        width: 100%;
+    }
+
+    .payment-buttons {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .payment-buttons button {
+        min-height: 58px;
+        flex-direction: column;
+        gap: 1px;
+        font-size: 21px;
+    }
+
+    .payment-buttons button span {
+        font-size: 11px;
+    }
+
+    #upiQr {
+        width: 220px;
+        height: 220px;
+    }
+
+    #upiAmount {
+        font-size: 27px;
+    }
+
+    .bill-actions {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .save-bill-btn {
+        grid-column: 1 / -1;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .report-form {
+        grid-template-columns: 1fr;
+    }
+
+    .communication-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .setting-row {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .setting-buttons {
+        flex-direction: column;
+    }
+
+    .setting-buttons button {
+        width: 100%;
+    }
+
+}
+
+
+
+/* =====================================================
+   PROFESSIONAL REPORT LAYOUT
+===================================================== */
+
+.report-summary-grid{
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:12px;
+    margin-bottom:16px;
+}
+
+.report-stat{
+    border:1px solid #d1d5db;
+    border-radius:12px;
+    padding:14px;
+    background:#fff;
+}
+
+.report-stat span{
+    display:block;
+    font-size:12px;
+    color:#64748b;
+    margin-bottom:7px;
+}
+
+.report-stat strong{
+    display:block;
+    font-size:20px;
+    line-height:1.2;
+}
+
+.report-panel{
+    background:#fff;
+    border:1px solid #d1d5db;
+    border-radius:12px;
+    margin-bottom:16px;
+    overflow:hidden;
+}
+
+.report-panel-title{
+    padding:12px 14px;
+    font-size:15px;
+    font-weight:700;
+    border-bottom:1px solid #e5e7eb;
+}
+
+.payment-report-grid{
+    display:grid;
+    grid-template-columns:repeat(5,minmax(0,1fr));
+}
+
+.payment-report-grid>div{
+    padding:12px 14px;
+    border-right:1px solid #e5e7eb;
+}
+
+.payment-report-grid>div:last-child{
+    border-right:0;
+}
+
+.payment-report-grid span{
+    display:block;
+    color:#64748b;
+    font-size:11px;
+    margin-bottom:5px;
+}
+
+.payment-report-grid strong{
+    display:block;
+    font-size:14px;
+}
+
+.discount-report-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 14px;
+    border-top:1px solid #e5e7eb;
+    font-weight:600;
+}
+
+.report-table-wrap{
+    overflow-x:auto;
+}
+
+.report-table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:480px;
+}
+
+.report-table th,
+.report-table td{
+    padding:10px 12px;
+    border-bottom:1px solid #e5e7eb;
+    text-align:left;
+}
+
+.report-table th{
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.03em;
+    color:#64748b;
+}
+
+.report-table tbody tr:last-child td{
+    border-bottom:0;
+}
+
+.report-table .num{
+    text-align:right;
+    white-space:nowrap;
+}
+
+.report-table .status-col{
+    text-align:center;
+}
+
+.stock-ok,
+.stock-low{
+    font-weight:700;
+}
+
+@media (max-width:700px){
+    .report-summary-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+
+    .payment-report-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+
+    .payment-report-grid>div{
+        border-right:0;
+        border-bottom:1px solid #e5e7eb;
+    }
+
+    .payment-report-grid>div:last-child{
+        border-bottom:0;
+    }
+}
+
+
+/* =====================================================
+   LANDSCAPE POS
+===================================================== */
+
+@media (max-height: 500px) and (orientation: landscape) {
+
+    .top-header {
+        min-height: 54px;
+    }
+
+    .main-nav button {
+        min-height: 42px;
+    }
+
+    .content {
+        padding: 8px;
+    }
+
+    .billing-layout {
+        grid-template-columns: 220px minmax(0, 1fr);
+    }
+
+    .panel {
+        padding: 10px;
+    }
+
+    #upiQr {
+        width: 180px;
+        height: 180px;
+    }
+
+}
+
+/* =========================
+   REPORTS
+========================= */
+
+.report-filter-card {
+    margin-bottom: 20px;
+}
+
+.report-date-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.report-shortcuts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.report-summary-grid {
+    margin-bottom: 20px;
+}
+
+.report-print-footer {
+    display: none;
+}
+
+@media (max-width: 700px) {
+
+    .report-date-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .report-shortcuts {
+        flex-direction: column;
+    }
+
+    .report-shortcuts button {
+        width: 100%;
+    }
+
+}
+
+/* ================================
+   AROMATIC POS PAGE NAVIGATION FIX
+================================ */
+
+.page {
+    display: none !important;
+    width: 100%;
+}
+
+.page.active-page {
+    display: block !important;
+}
+
+/* Main content area */
+.main-container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+/* Dashboard */
+#dashboardPage.active-page {
+    display: block !important;
+}
+
+/* Other pages */
+#billingPage,
+#itemsPage,
+#summaryPage,
+#communicationPage,
+#settingsPage {
+    width: 100%;
+}
+
+/* Don't hide login screen */
+#loginScreen {
+    display: flex;
+}
+
+#loginScreen.hidden {
+    display: none !important;
+}
+.panel h3{margin:0 0 12px}.nav-btn.active{background:#374151}.pay-btn.selected{background:#111827;color:#fff;border-color:#111827}.full{width:100%;margin-top:8px}.billing-layout{display:grid;grid-template-columns:300px minmax(0,1fr);gap:16px}.bill-head{display:flex;justify-content:space-between}.bill-head span{padding:5px 9px;background:#fef3c7;border-radius:20px;font-size:11px}.form-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.bill-actions{margin-top:15px;display:grid;grid-template-columns:1fr 1.5fr 2fr;gap:8px}.bill-actions button{min-height:50px;border:0;border-radius:8px;font-weight:bold}.danger-btn{background:#dc2626!important;color:#fff!important}.save-btn{background:#15803d!important;color:#fff!important}.print-btn{background:#e5e7eb!important;color:#111827!important}.upi-box{margin-top:12px;padding:16px;text-align:center;border:1px solid #cbd5e1;border-radius:10px;background:#f8fafc}.upi-box img{display:block;width:220px;height:220px;margin:10px auto;max-width:100%}.modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:grid;place-items:center;padding:15px;z-index:50}.modal-card{background:#fff;width:100%;max-width:650px;padding:22px;border-radius:14px;max-height:90vh;overflow:auto}.modal-close{float:right;border:0;background:none;font-size:28px}.low{color:#b91c1c;font-weight:bold}.ok{color:#15803d;font-weight:bold}.report-card{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.report-card .card{margin:0}@media(max-width:900px){.billing-layout{grid-template-columns:1fr}.form-grid{grid-template-columns:repeat(2,1fr)}.report-card{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.form-grid{grid-template-columns:1fr}.bill-actions{grid-template-columns:1fr 1fr}.save-btn{grid-column:1/-1}.billing-layout{gap:8px}}
+
+/* Item Add/Edit form: permanent labels */
+.item-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.item-form-grid label{display:flex;flex-direction:column;gap:6px;font-weight:700;color:#334155}
+.item-form-grid label span{font-size:14px}
+.item-form-grid input{width:100%;box-sizing:border-box}
+.item-form-grid input::placeholder{color:#94a3b8;opacity:1}
+@media(max-width:600px){.item-form-grid{grid-template-columns:1fr}}
+
+/* Selling: delivery, guarantee and expiry */
+.sale-meta-label{display:block;margin:10px 0 5px;font-weight:bold;font-size:13px}
