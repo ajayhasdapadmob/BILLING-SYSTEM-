@@ -1275,3 +1275,43 @@ th {
 
 /* Selling: delivery, guarantee and expiry */
 .sale-meta-label{display:block;margin:10px 0 5px;font-weight:bold;font-size:13px}
+
+
+/* =====================================================
+   MOBILE DASHBOARD TABLE FIX
+   Keep Item Sales & Stock inside the screen on phones.
+===================================================== */
+.dashboard-stock-table{width:100%;overflow:visible}
+.dashboard-stock-table table{min-width:0;width:100%;table-layout:fixed}
+.dashboard-stock-table th,
+.dashboard-stock-table td{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dashboard-stock-table th:nth-child(1),
+.dashboard-stock-table td:nth-child(1){width:30%}
+.dashboard-stock-table th:nth-child(2),
+.dashboard-stock-table td:nth-child(2),
+.dashboard-stock-table th:nth-child(3),
+.dashboard-stock-table td:nth-child(3),
+.dashboard-stock-table th:nth-child(4),
+.dashboard-stock-table td:nth-child(4){width:16%}
+.dashboard-stock-table th:nth-child(5),
+.dashboard-stock-table td:nth-child(5){width:22%;text-align:right}
+
+.data-transfer-login{margin-top:14px;padding-top:12px;border-top:1px solid #e5e7eb}
+.data-transfer-login button{width:100%;min-height:44px}
+.data-transfer-login p{margin-top:8px;color:#64748b;font-size:11px;line-height:1.4}
+
+@media(max-width:600px){
+  .dashboard-stock-table table{font-size:11px}
+  .dashboard-stock-table th,
+  .dashboard-stock-table td{padding:8px 5px;font-size:11px}
+  .dashboard-stock-table th:nth-child(2),
+  .dashboard-stock-table td:nth-child(2){display:none}
+  .dashboard-stock-table th:nth-child(1),
+  .dashboard-stock-table td:nth-child(1){width:38%}
+  .dashboard-stock-table th:nth-child(3),
+  .dashboard-stock-table td:nth-child(3){width:18%}
+  .dashboard-stock-table th:nth-child(4),
+  .dashboard-stock-table td:nth-child(4){width:20%}
+  .dashboard-stock-table th:nth-child(5),
+  .dashboard-stock-table td:nth-child(5){width:24%}
+}
